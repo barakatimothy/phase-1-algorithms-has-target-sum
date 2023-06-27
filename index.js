@@ -1,5 +1,12 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i=0 ; i< array.length;i++){
+    const complement = target - array[i]
+    for(let j= i+1;j<array.length;j++){
+      if(array[j]===complement)return true  
+     }
+  }
+  return false
 }
 
 /* 
@@ -7,11 +14,19 @@ function hasTargetSum(array, target) {
 */
 
 /* 
-  Add your pseudocode here
+ [3, 8, 12, 4, 11, 7], 10
+ iterate through each number in the array 
+ for the current number ,identify a complement that adds up to the
+ target (complement = target - current num)
+ if so return true 
+ other wise  return false
 */
 
 /*
   Add written explanation of your solution here
+  make a function that takes an array of integers
+  loop through the array [ 2 , 1 ,3  ,4  ,5] ,6 
+  index i should be added to j , j is i +1
 */
 
 // You can run `node index.js` to view these console logs
